@@ -86,7 +86,7 @@ struct_paket input_paket(int i)
    fflush(stdin);
    cin.get(sp[i].paket, 15);
    cout<<"Lama Paket (Hari)  : ";cin>>sp[i].hari;
-   cout<<"Harga Paket        : Rp.";cin>>sp[i].diskon;
+   cout<<"Diskon             : Rp.";cin>>sp[i].diskon;
    return sp[i];
 }
 
