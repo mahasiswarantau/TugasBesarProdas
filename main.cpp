@@ -141,18 +141,18 @@ struct_pembelian input_pembelian(){
   cout<<"Nama             : ";
   fflush(stdin);
   cin.get(pem.nama, 30);
-  cout<<"Tanggal(dd/mm/yy): ";
+  cout<<"Tanggal          : ";
   gotoxy(20,19);cin>>pem.st.tgl;
-  gotoxy(22,19);cout<<"/";
-  gotoxy(23,19);cin>>pem.st.bln;
-  gotoxy(25,19);cout<<"/";
-  gotoxy(26,19);cin>>pem.st.thn;
-  gotoxy(1,20);cout<<"Tujuan           : ";
-  gotoxy(20,20);fflush(stdin);cin.get(pem.tujuan, 15);
-  gotoxy(1,21);cout<<"Jumlah Tiket     : ";
-  gotoxy(20,21);cin>>pem.jumlah;
-  gotoxy(1,22);cout<<"Paket            : ";
-  gotoxy(20,22);fflush(stdin);cin.get(pem.paket, 15);
+  gotoxy(1,20);cout<<"Bulan            : ";
+  gotoxy(20,20);cin>>pem.st.bln;
+  gotoxy(1,21;cout<<"Tahun           : ";
+  gotoxy(20,21);cin>>pem.st.thn;
+  gotoxy(1,22);cout<<"Tujuan           : ";
+  gotoxy(20,22);fflush(stdin);cin.get(pem.tujuan, 15);
+  gotoxy(1,23);cout<<"Jumlah Tiket     : ";
+  gotoxy(20,23);cin>>pem.jumlah;
+  gotoxy(1,24);cout<<"Paket            : ";
+  gotoxy(20,24);fflush(stdin);cin.get(pem.paket, 15);
   return pem;
 }
 
@@ -207,10 +207,10 @@ void output_pembelian(struct_jadwal sj[maks], struct_paket sp[maks], struct_pemb
   gotoxy(26,2);cout<<pem.st.tgl;
   gotoxy(1,3);cout<<"Tujuan           : "<<pem.tujuan;
   gotoxy(1,4);cout<<"Paket            : "<<pem.paket;                 
-  gotoxy(1,5);cout<<"Jumlah           : "<<pem.jumlah;                 
-  gotoxy(1,6);cout<<"Subharga         : "<<pem.subharga;                 
-  gotoxy(1,7);cout<<"Potongan         : "<<pem.potongan;                 
-  gotoxy(1,8);cout<<"Total Harga      : "<<pem.total;                 
+  gotoxy(1,5);cout<<"Jumlah           : "<<pem.jumlah<<" Buah";                 
+  gotoxy(1,6);cout<<"Subharga         : Rp."<<pem.subharga;                 
+  gotoxy(1,7);cout<<"Potongan         : Rp."<<pem.potongan;                 
+  gotoxy(1,8);cout<<"Total Harga      : Rp."<<pem.total;                 
   gotoxy(1,9);cout<<"Bayar            : Rp.";gotoxy(23,9);cin>>pem.bayar;
                  
   //Kembalian
@@ -329,7 +329,7 @@ int main(int argc, char *argv[])
                      cout<<"2. Output Data"<<endl;
                      cout<<"3. Kembali ke menu utama"<<endl;
                      cout<<"------------------------"<<endl;                     
-                     cout<<"Masukkan Pilihan : "<<endl;
+                     cout<<"Masukkan Pilihan : ";
                      cin>>sub;
                      
                      switch(sub){
